@@ -2,6 +2,8 @@
 
 AI research-paper note-taker on Cloudflare.
 
+https://paperpulse.hariworksfor.workers.dev/
+
 Upload PDF → Worker → **Workflow** (parse with `unpdf` → extract verbatim facts → Llama 3.3 structured notes → save) → **D1** library + persistent chat.
 
 | Layer | Service |
