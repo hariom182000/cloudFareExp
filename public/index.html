@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PaperPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="brand"><span class="logo">P</span><div><b>PaperPulse</b><small>Research notes, explained</small></div></div>
+    <label class="btn-primary" id="upload-btn">
+      <input id="file" type="file" accept="application/pdf" hidden />
+      <span id="upload-label">+ Upload paper (PDF)</span>
+    </label>
+    <div class="side-title">Library</div>
+    <div id="library"></div>
+  </aside>
+
+  <main id="main"></main>
+
+  <div id="loader" hidden>
+    <div class="loader-card">
+      <div class="spinner"></div>
+      <h3 id="loader-title">Reading your paper…</h3>
+      <ol id="loader-steps">
+        <li data-s="parsing">Extracting text from PDF</li>
+        <li data-s="analyzing">Analyzing with Llama 3.3</li>
+        <li data-s="saving">Saving notes</li>
+      </ol>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

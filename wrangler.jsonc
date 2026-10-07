@@ -1,0 +1,15 @@
+{
+  "name": "paperpulse",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "./public" },
+  "ai": { "binding": "AI" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "paperpulse", "database_id": "e7fadf85-fe92-4fb7-b60e-424d2e9684c9" }
+  ],
+  "r2_buckets": [{ "binding": "PDFS", "bucket_name": "paperpulse-pdfs" }],
+  "workflows": [
+    { "name": "paperpulse-workflow", "binding": "PAPER_WORKFLOW", "class_name": "PaperWorkflow" }
+  ]
+}
